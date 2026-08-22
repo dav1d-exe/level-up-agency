@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+
+# Allow favicon access
+User-agent: Googlebot
+Allow: /favicon.ico
+
+User-agent: Googlebot-Image
+Allow: /favicon.ico
+
+Sitemap: https://levelup-agency.ro/sitemap.xml
