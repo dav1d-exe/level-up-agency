@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="dark"/>
+  <meta name="theme-color" content="#050505"/>
+  <meta name="description" content="Politica de confidențialitate LevelUP Agency: informații despre datele colectate, folosirea acestora, cookies, securitate și drepturile utilizatorilor."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://levelup-agency.ro/confidentialitate/"/>
+  <title>Politică de Confidențialitate – LevelUP Agency</title>
+  <link rel="icon" type="image/png" href="/favicon.png?v=2"/>
+  <link rel="shortcut icon" href="/favicon.png?v=2"/>
+  <link rel="apple-touch-icon" href="/favicon.png?v=2"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --black: #050505;
+      --blue-light: #5BC8F5;
+      --blue-mid: #2B8FD8;
+      --blue-dark: #1A5FA8;
+      --white: #ffffff;
+      --gray: #9aa3b2;
+      --surface: #0d0d0d;
+      --surface2: #111111;
+      --surface3: #161616;
+      --border: rgba(91,200,245,0.10);
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html {
+      color-scheme: dark;
+      forced-color-adjust: none;
+      scroll-behavior: smooth;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --black: #050505; --blue-light: #5BC8F5; --blue-mid: #2B8FD8;
+        --blue-dark: #1A5FA8; --white: #ffffff; --gray: #9aa3b2;
+        --surface: #0d0d0d; --surface2: #111111; --surface3: #161616;
+        --border: rgba(91,200,245,0.10);
+      }
+      html, body { background: #050505 !important; color: #ffffff !important; }
+    }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.8;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 60px;
+      background: rgba(5,5,5,0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem; letter-spacing: 2px; color: var(--white);
+    }
+    .nav-logo-text span { color: var(--blue-light); }
+    .nav-back {
+      display: flex; align-items: center; gap: 8px;
+      text-decoration: none; color: var(--gray);
+      font-size: .85rem; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--blue-light); }
+    .nav-back svg { width: 16px; height: 16px; }
+
+    /* HERO */
+    .hero {
+      padding: 140px 60px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: .7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--blue-light); }
+    .hero-meta {
+      color: var(--gray);
+      font-size: .85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-meta span {
+      display: flex; align-items: center; gap: 6px;
+    }
+    .hero-meta svg { width: 14px; height: 14px; color: var(--blue-light); }
+
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 60px 100px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+      position: relative;
+      overflow: hidden;
+    }
+    .toc::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+    }
+    .toc-title {
+      font-weight: 700;
+      font-size: .8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      counter-reset: toc;
+    }
+    .toc ol li { counter-increment: toc; }
+    .toc ol li a {
+      text-decoration: none;
+      color: var(--gray);
+      font-size: .875rem;
+      transition: color .2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc ol li a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: .7rem;
+      color: var(--blue-light);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .toc ol li a:hover { color: var(--white); }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 52px;
+      scroll-margin-top: 100px;
+    }
+    .section-num {
+      font-size: .65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section p {
+      color: var(--gray);
+      font-size: .95rem;
+      margin-bottom: 14px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      list-style: none;
+      margin: 14px 0;
+    }
+    .section ul li {
+      color: var(--gray);
+      font-size: .95rem;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 15px;
+      width: 6px; height: 6px;
+      background: var(--blue-light);
+      border-radius: 50%;
+    }
+    .section strong { color: var(--white); font-weight: 600; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: rgba(91,200,245,0.05);
+      border: 1px solid rgba(91,200,245,0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      color: var(--gray);
+      font-size: .9rem;
+    }
+    .highlight-box strong { color: var(--blue-light); }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+    }
+    .contact-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .contact-card p { color: var(--gray); font-size: .875rem; margin-bottom: 20px; }
+    .contact-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+      color: var(--black);
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: .9rem;
+      transition: opacity .2s, transform .2s;
+    }
+    .contact-card a:hover { opacity: .9; transform: translateY(-2px); }
+    .contact-card a svg { width: 16px; height: 16px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 32px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem; letter-spacing: 2px;
+    }
+    .footer-logo-text span { color: var(--blue-light); }
+    footer p { color: var(--gray); font-size: .78rem; }
+    footer a { color: var(--gray); text-decoration: none; font-size: .78rem; transition: color .2s; }
+    footer a:hover { color: var(--blue-light); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .hero { padding: 120px 20px 48px; }
+      .content { padding: 40px 20px 80px; }
+      .toc ol { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-text">Level<span>UP</span> Agency</span>
+    </a>
+    <a href="/" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
+      Înapoi la site
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">Document Legal</div>
+    <h1>POLITICĂ DE <span>CONFIDENȚIALITATE</span></h1>
+    <div class="hero-meta">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Ultima actualizare: Iunie 2026
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        București, România
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conform GDPR
+      </span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOC -->
+    <div class="toc">
+      <div class="toc-title">Cuprins</div>
+      <ol>
+        <li><a href="#s1">Cine suntem</a></li>
+        <li><a href="#s2">Ce date colectăm</a></li>
+        <li><a href="#s3">Cum folosim datele</a></li>
+        <li><a href="#s4">Baza legală</a></li>
+        <li><a href="#s5">Cookies</a></li>
+        <li><a href="#s6">Sharing date</a></li>
+        <li><a href="#s7">Drepturile tale</a></li>
+        <li><a href="#s8">Securitate</a></li>
+        <li><a href="#s9">Retenție date</a></li>
+        <li><a href="#s10">Contact</a></li>
+      </ol>
+    </div>
+
+    <!-- 1 -->
+    <div class="section" id="s1">
+      <div class="section-num">01</div>
+      <h2>Cine Suntem</h2>
+      <p>
+        <strong>LevelUP Agency</strong> este o agenție de marketing digital cu sediul în București, România, specializată în gestionare social media, publicitate plătită, creare de conținut și servicii web.
+      </p>
+      <div class="highlight-box">
+        <strong>Operator de date:</strong> LevelUP Agency<br/>
+        <strong>Email:</strong> contact@levelup-agency.ro<br/>
+        <strong>Telefon:</strong> +40 770 794 255<br/>
+        <strong>Locație:</strong> București, România
+      </div>
+      <p>
+        Această politică de confidențialitate se aplică site-ului nostru și descrie modul în care colectăm, utilizăm și protejăm datele tale personale, în conformitate cu Regulamentul General privind Protecția Datelor (GDPR) și legislația română aplicabilă.
+      </p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section" id="s2">
+      <div class="section-num">02</div>
+      <h2>Ce Date Colectăm</h2>
+      <p>Colectăm următoarele categorii de date, în funcție de interacțiunea ta cu site-ul nostru:</p>
+      <ul>
+        <li><strong>Date de contact</strong> — nume, adresă de email, număr de telefon (când ne contactezi direct)</li>
+        <li><strong>Date de navigare</strong> — adresa IP, tipul de browser, pagini vizitate, timp petrecut pe site, dispozitiv utilizat</li>
+        <li><strong>Date de interacțiune</strong> — click-uri pe butoanele de telefon și email, secțiuni vizualizate</li>
+        <li><strong>Date tehnice</strong> — cookies necesare funcționării site-ului, preferințe de sesiune</li>
+      </ul>
+      <p>
+        Nu colectăm date sensibile precum informații financiare, date medicale sau date biometrice.
+      </p>
+    </div>
+
+    <!-- 3 -->
+    <div class="section" id="s3">
+      <div class="section-num">03</div>
+      <h2>Cum Folosim Datele</h2>
+      <p>Datele colectate sunt utilizate exclusiv în următoarele scopuri:</p>
+      <ul>
+        <li>Răspuns la solicitările și întrebările tale</li>
+        <li>Îmbunătățirea experienței pe site și a serviciilor oferite</li>
+        <li>Analiză statistică anonimizată a traficului (Google Analytics)</li>
+        <li>Trimiterea de informații despre serviciile noastre, dacă ai consimțit explicit</li>
+        <li>Respectarea obligațiilor legale aplicabile</li>
+      </ul>
+      <p>
+        Nu vom folosi datele tale în scopuri de marketing direct fără consimțământul tău explicit și nu le vom vinde sau închiria niciunei terțe părți.
+      </p>
+    </div>
+
+    <!-- 4 -->
+    <div class="section" id="s4">
+      <div class="section-num">04</div>
+      <h2>Baza Legală pentru Prelucrare</h2>
+      <p>Prelucrăm datele tale personale pe baza următoarelor temeiuri legale conform GDPR:</p>
+      <ul>
+        <li><strong>Consimțământ (Art. 6(1)(a))</strong> — pentru cookies ne-esențiale și comunicări de marketing</li>
+        <li><strong>Interes legitim (Art. 6(1)(f))</strong> — pentru analiza traficului și îmbunătățirea site-ului</li>
+        <li><strong>Executarea unui contract (Art. 6(1)(b))</strong> — când ne contactezi pentru servicii</li>
+        <li><strong>Obligație legală (Art. 6(1)(c))</strong> — când legislația română ne impune păstrarea unor date</li>
+      </ul>
+    </div>
+
+    <!-- 5 -->
+    <div class="section" id="s5">
+      <div class="section-num">05</div>
+      <h2>Cookies</h2>
+      <p>
+        Site-ul nostru utilizează cookies pentru funcționare corectă și pentru analiza traficului. Categoriile de cookies utilizate:
+      </p>
+      <ul>
+        <li><strong>Cookies esențiale</strong> — necesare funcționării site-ului, nu pot fi dezactivate</li>
+        <li><strong>Cookies analitice</strong> — Google Analytics, pentru înțelegerea comportamentului vizitatorilor (pot fi dezactivate)</li>
+        <li><strong>Cookies de stocare locală</strong> — salvăm preferințele de sesiune în browserul tău (localStorage)</li>
+      </ul>
+      <p>
+        Poți controla și șterge cookies din setările browserului tău. Dezactivarea cookies poate afecta funcționalitatea unor părți din site.
+      </p>
+      <div class="highlight-box">
+        <strong>Google Analytics:</strong> Folosim Google Analytics 4 pentru statistici de trafic anonimizate. Google poate procesa datele în afara UE, dar în conformitate cu clauzele contractuale standard aprobate de Comisia Europeană. Poți opta pentru neînregistrare folosind <strong>Google Analytics Opt-out Browser Add-on</strong>.
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="section" id="s6">
+      <div class="section-num">06</div>
+      <h2>Partajarea Datelor cu Terți</h2>
+      <p>
+        Nu vindem, nu închiriem și nu comercializăm datele tale personale. Putem partaja date limitate cu:
+      </p>
+      <ul>
+        <li><strong>Google LLC</strong> — prin Google Analytics, pentru statistici de trafic anonimizate</li>
+        <li><strong>Furnizori de hosting</strong> — serverul care găzduiește site-ul nostru</li>
+        <li><strong>Autorități publice</strong> — exclusiv când legea română sau europeană ne obligă</li>
+      </ul>
+      <p>
+        Toți partenerii noștri sunt obligați contractual să respecte confidențialitatea datelor și să se conformeze GDPR.
+      </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section" id="s7">
+      <div class="section-num">07</div>
+      <h2>Drepturile Tale</h2>
+      <p>Conform GDPR, ai următoarele drepturi cu privire la datele tale personale:</p>
+      <ul>
+        <li><strong>Dreptul de acces</strong> — poți solicita o copie a datelor pe care le deținem despre tine</li>
+        <li><strong>Dreptul la rectificare</strong> — poți corecta datele inexacte sau incomplete</li>
+        <li><strong>Dreptul la ștergere</strong> — poți solicita ștergerea datelor („dreptul de a fi uitat")</li>
+        <li><strong>Dreptul la restricționarea prelucrării</strong> — poți limita modul în care folosim datele tale</li>
+        <li><strong>Dreptul la portabilitate</strong> — poți primi datele într-un format structurat, lizibil automat</li>
+        <li><strong>Dreptul de opoziție</strong> — te poți opune prelucrării bazate pe interesul nostru legitim</li>
+        <li><strong>Dreptul de a retrage consimțământul</strong> — oricând, fără a afecta legalitatea prelucrărilor anterioare</li>
+      </ul>
+      <p>
+        Pentru a exercita oricare dintre aceste drepturi, ne poți contacta la <strong>contact@levelup-agency.ro</strong>. Vom răspunde în termen de maximum <strong>30 de zile</strong>.
+      </p>
+      <p>
+        Ai dreptul de a depune o plângere la <strong>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong> — <a href="https://www.dataprotection.ro" target="_blank" style="color:var(--blue-light)">www.dataprotection.ro</a>.
+      </p>
+    </div>
+
+    <!-- 8 -->
+    <div class="section" id="s8">
+      <div class="section-num">08</div>
+      <h2>Securitatea Datelor</h2>
+      <p>
+        Luăm măsuri tehnice și organizatorice adecvate pentru protejarea datelor tale împotriva accesului neautorizat, pierderii sau distrugerii, inclusiv:
+      </p>
+      <ul>
+        <li>Conexiuni HTTPS criptate (SSL/TLS)</li>
+        <li>Acces restricționat la datele personale, doar pentru persoanele autorizate</li>
+        <li>Monitorizarea periodică a sistemelor pentru vulnerabilități</li>
+        <li>Parole puternice și autentificare în două etape pentru sistemele interne</li>
+      </ul>
+      <p>
+        În cazul unui incident de securitate care îți afectează drepturile, te vom notifica în termen de 72 de ore, conform art. 33 GDPR.
+      </p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section" id="s9">
+      <div class="section-num">09</div>
+      <h2>Retenția Datelor</h2>
+      <p>Păstrăm datele tale personale doar atât timp cât este necesar scopului pentru care au fost colectate:</p>
+      <ul>
+        <li><strong>Date de contact</strong> — pe durata relației comerciale + 3 ani</li>
+        <li><strong>Date analitice</strong> — maximum 26 de luni (conform setărilor Google Analytics)</li>
+        <li><strong>Date de facturare</strong> — 10 ani (obligație legală fiscală română)</li>
+        <li><strong>Cookies de sesiune</strong> — până la închiderea browserului</li>
+      </ul>
+      <p>
+        La expirarea perioadei de retenție, datele sunt șterse sau anonimizate în mod securizat.
+      </p>
+    </div>
+
+    <!-- 10 -->
+    <div class="section" id="s10">
+      <div class="section-num">10</div>
+      <h2>Contact și Actualizări</h2>
+      <p>
+        Această politică poate fi actualizată periodic. Orice modificare semnificativă va fi comunicată prin actualizarea datei din antetul acestui document. Continuarea utilizării site-ului după modificări constituie acceptarea noii politici.
+      </p>
+      <p>
+        Pentru orice întrebări, solicitări sau reclamații legate de confidențialitatea datelor tale, ne poți contacta:
+      </p>
+    </div>
+
+    <!-- CONTACT CARD -->
+    <div class="contact-card">
+      <h3>AI ÎNTREBĂRI?</h3>
+      <p>Suntem disponibili pentru orice nelămurire legată de datele tale personale.</p>
+      <a href="mailto:contact@levelup-agency.ro">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        contact@levelup-agency.ro
+      </a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo-text">Level<span>UP</span> Agency</span>
+    <p>© 2026 LevelUP Agency. Toate drepturile rezervate.</p>
+    <a href="/">← Înapoi la site</a>
+  </footer>
+
+</body>
+</html>
